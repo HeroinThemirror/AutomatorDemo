@@ -1,4 +1,4 @@
-﻿package com.testdemo.pinktestdemo1;
+package com.testdemo.pinktestdemo1;
 
 import android.os.Environment;
 import android.os.SystemClock;
@@ -45,7 +45,7 @@ public class AutomatorDemo extends InstrumentationTestCase{
         if(currentApiVersion >= 18){
             long timeout = Configurator.getInstance().getActionAcknowledgmentTimeout();
             Configurator.getInstance().setActionAcknowledgmentTimeout(num);
-                mObject.click();
+            mObject.click();
             Configurator.getInstance().setActionAcknowledgmentTimeout(timeout);
         }
     }
@@ -1309,7 +1309,7 @@ public class AutomatorDemo extends InstrumentationTestCase{
                 mDevice.takeScreenshot(new File("//storage//sdcard0//AutomatorDemo" + "//DissolveNotExist.png"));
                 fail(e.toString());
             }
-        } 
+        }
         for (int i = 0; i < 5; i++) {
             if (!index.exists()) {
                 mDevice.pressBack();
@@ -1618,7 +1618,7 @@ public class AutomatorDemo extends InstrumentationTestCase{
             SystemClock.sleep(2500);
             if(applyWaiting.exists()){
                 applyWaiting.click();
-            }else{  
+            }else{
                 mDevice.pressBack();
             }
         }
@@ -1728,7 +1728,7 @@ public class AutomatorDemo extends InstrumentationTestCase{
         UiScrollable recommendTabPage = new UiScrollable(new UiSelector().className(android.support.v4.view.ViewPager.class.getName()));
         UiObject recommendTabButton = mDevice.findObject(new UiSelector().resourceId("pinkdiary.xiaoxiaotu.com:id/indicator")
                 .childSelector(new UiSelector().className(android.widget.LinearLayout.class.getName())
-                .childSelector(new UiSelector().className(android.widget.LinearLayout.class.getName()).index(1))));
+                        .childSelector(new UiSelector().className(android.widget.LinearLayout.class.getName()).index(1))));
         UiObject officalUser1 = mDevice.findObject(new UiSelector().resourceId("pinkdiary.xiaoxiaotu.com:id/official_gc_ly1"));
         UiObject officalUserDetail = mDevice.findObject(new UiSelector().resourceId("pinkdiary.xiaoxiaotu.com:id/user_portrait"));
         UiObject portaitAlbum = mDevice.findObject(new UiSelector().resourceId("pinkdiary.xiaoxiaotu.com:id/user_album_img"));
