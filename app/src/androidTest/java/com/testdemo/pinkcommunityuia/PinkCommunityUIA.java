@@ -507,7 +507,7 @@ public class PinkCommunityUIA extends InstrumentationTestCase{
         share_cancel.click();
         mDevice.pressBack();
         //为你推荐入口
-        home_scroll.scrollIntoView(hot_diary_list);
+        home_scroll.scrollIntoView(home_hotdiary_item0);
         home_hotdiary_item0.clickAndWaitForNewWindow();
         SystemClock.sleep(1500);
         mDevice.pressBack();
@@ -567,7 +567,8 @@ public class PinkCommunityUIA extends InstrumentationTestCase{
             weather_switch.click();
             daily_word_switch.click();
             rec_foryou_switch.click();
-            rec_robot_switch.click();
+            if (rec_robot_switch.exists())
+                rec_robot_switch.click();
             mDevice.pressBack();
         }
         home_scroll.scrollIntoView(skinShop);
